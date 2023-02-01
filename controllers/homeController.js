@@ -1,4 +1,4 @@
-import { products } from "../db.js";
+import { products, shoppingCart } from "../db.js";
 
 const homeRender = async (req, res) => {
   try {
@@ -8,4 +8,12 @@ const homeRender = async (req, res) => {
   }
 };
 
-export { homeRender };
+const aboutRender = async (req, res) => {
+  try {
+    res.render("about", { shoppingCart });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export { homeRender, aboutRender };
