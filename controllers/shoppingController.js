@@ -2,7 +2,7 @@ import { products, shoppingCart } from "../db.js";
 
 const homeRender = async (req, res) => {
   try {
-    res.render("home", { products });
+    res.render("home", { products, shoppingCart });
   } catch (error) {
     console.log(error);
   }
@@ -19,7 +19,7 @@ const aboutRender = async (req, res) => {
 const addToCart = async (req, res) => {
   try {
     const { id } = req.body;
-    // parseint?
+
     const product = products.find((prod) => prod.id === parseInt(id));
     const productInCart = shoppingCart.find((prod) => prod.id === parseInt(id));
     if (productInCart) {

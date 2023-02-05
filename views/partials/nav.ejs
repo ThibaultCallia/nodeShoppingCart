@@ -24,8 +24,11 @@
 
       <button class="cart-btn btn btn-outline-dark">
         <i class="bi-cart-fill me-1"></i>
-        Cart
-        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+        Cart <% let totalCartNum = shoppingCart.reduce((a,b)=> a + b.quantity,
+        0) %>
+        <span class="badge bg-dark text-white ms-1 rounded-pill"
+          ><%= totalCartNum %></span
+        >
       </button>
     </div>
   </div>

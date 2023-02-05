@@ -25,17 +25,6 @@ const products = [
   },
 ];
 
-const shoppingCart = [
-  {
-    id: 1,
-    name: "Product 1",
-    quantity: 1,
-  },
-  {
-    id: 2,
-    name: "Product 2",
-    quantity: 3,
-  },
-];
+const shoppingCart = [];
 
 export { products, shoppingCart };
